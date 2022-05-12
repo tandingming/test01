@@ -1,0 +1,35 @@
+/**
+ * Created with IntelliJ IDEA.
+ *
+ * @author : TanDingMing
+ * @version :
+ * @Project : test
+ * @Package : PACKAGE_NAME
+ * @ClassName : .java
+ * @createTime : 2022/5/3 13:18
+ * @Email :
+ * @Description :
+ */
+public class test {
+    public static void main(String[] args) {
+
+    }
+
+    public ListNode reverseList(ListNode head){
+        ListNode a = head;
+        ListNode left = null;
+        ListNode right = a;
+
+        while (right != null){
+            right.next = left;
+            left = right;
+            right = right.next;
+        }
+
+        return a;
+    }
+}
+class ListNode {
+    int val;
+    ListNode next = null;
+}
